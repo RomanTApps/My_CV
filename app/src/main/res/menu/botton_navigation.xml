@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/infoFragment"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:title="Info" />
+    <item
+        android:id="@+id/firmListFragment"
+        android:icon="@android:drawable/checkbox_on_background"
+        android:title="Experience" />
+    <item
+        android:id="@+id/preferenceFragment"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="preference" />
+</menu>

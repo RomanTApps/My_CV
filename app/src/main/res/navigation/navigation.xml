@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/infoFragment">
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="tsisyk.app.mycv.ui.info.InfoFragment"
+        android:label="info_fragment"
+        tools:layout="@layout/info_fragment" />
+    <fragment
+        android:id="@+id/firmListFragment"
+        android:name="tsisyk.app.mycv.ui.experience.list.FirmListFragment"
+        android:label="firm_list_fragment"
+        tools:layout="@layout/firm_list_fragment" />
+    <fragment
+        android:id="@+id/jobDescriptionFragment"
+        android:name="tsisyk.app.mycv.ui.experience.description.JobDescriptionFragment"
+        android:label="job_description_fragment"
+        tools:layout="@layout/job_description_fragment" />
+    <fragment
+        android:id="@+id/preferenceFragment"
+        android:name="tsisyk.app.mycv.ui.preference.PreferenceFragment"
+        android:label="preference_fragment"
+        tools:layout="@layout/preference_fragment" />
+</navigation>
