@@ -1,4 +1,4 @@
-package tsisyk.app.mycv.network
+package tsisyk.app.mycv.utils
 
 import java.io.IOException
 

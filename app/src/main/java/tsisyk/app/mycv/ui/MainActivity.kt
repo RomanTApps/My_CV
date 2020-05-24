@@ -1,4 +1,4 @@
-package tsisyk.app.mycv
+package tsisyk.app.mycv.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
+import tsisyk.app.mycv.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        navController = Navigation.findNavController(this, R.id.navigation_fragment)
+        navController = Navigation.findNavController(this,
+            R.id.navigation_fragment
+        )
         bottomNavigationView.setupWithNavController(navController)
         NavigationUI.setupActionBarWithNavController(this, navController)
     }

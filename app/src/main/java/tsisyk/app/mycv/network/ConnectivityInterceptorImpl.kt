@@ -6,7 +6,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import okhttp3.Interceptor
 import okhttp3.Response
-import java.io.IOException
+import tsisyk.app.mycv.utils.NoWifiException
 
 class ConnectivityInterceptorImpl(context: Context) : ConnectivityInterceptor {
 

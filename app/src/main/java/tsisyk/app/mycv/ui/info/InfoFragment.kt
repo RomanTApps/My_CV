@@ -1,23 +1,27 @@
 package tsisyk.app.mycv.ui.info
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.info_fragment.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.closestKodein
+import org.kodein.di.generic.instance
 import tsisyk.app.mycv.R
-import tsisyk.app.mycv.network.ConnectivityInterceptorImpl
-import tsisyk.app.mycv.network.MyMockApiService
-import tsisyk.app.mycv.network.NetWorkDataSourceImpl
+import tsisyk.app.mycv.ui.BaseScopedFragment
 
-class InfoFragment : Fragment() {
-    private var mViewModel: InfoViewModel? = null
+@Suppress("DEPRECATION")
+class InfoFragment() : BaseScopedFragment(), KodeinAware {
+
+    override val kodein by closestKodein()
+    private val viewModelFactory: InfoViewModelFactory by instance<InfoViewModelFactory>()
+    private lateinit var mViewModel: InfoViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,23 +31,17 @@ class InfoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mViewModel = ViewModelProviders.of(this).get(InfoViewModel::class.java)
+        mViewModel = ViewModelProviders.of(this, viewModelFactory).get(InfoViewModel::class.java)
+        bindUI()
+    }
 
-
-        // TODO: remove test responce
-
-        val myMockApiService = MyMockApiService(ConnectivityInterceptorImpl(requireContext()))
-        val netWorkDataSource = NetWorkDataSourceImpl(myMockApiService)
-        netWorkDataSource.fetchedInfo.observe(viewLifecycleOwner, Observer {
-            info_txt.text = "Hello. \n\n  My nama is ${it.position}. \n\n I`m an ${it.position}"
+    private fun bindUI() = launch {
+       val item =  mViewModel.cv.await()
+           item.observe(viewLifecycleOwner, Observer {
+            Log.i("infoEntry", it.email)
+            textGitHub.text = it?.toString()
         })
-
-        GlobalScope.launch(Dispatchers.Main) { netWorkDataSource.fetchInfo() }
     }
 
-    companion object {
-        fun newInstance(): InfoFragment {
-            return InfoFragment()
-        }
-    }
+
 }

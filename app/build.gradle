@@ -92,4 +92,7 @@ dependencies {
 
     // New Material Design
     implementation "com.google.android.material:material:1.1.0"
+
+    implementation "androidx.fragment:fragment-ktx:1.2.4"
+
 }

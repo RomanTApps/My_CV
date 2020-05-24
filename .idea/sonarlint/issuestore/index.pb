@@ -48,8 +48,6 @@ j
 :app/src/main/java/tsisyk/app/mycv/ui/info/InfoViewModel.kt,0\4\048a8e33cbfc873d1748d9800b26c2d694e155d6
 i
 9app/src/main/java/tsisyk/app/mycv/ui/info/InfoFragment.kt,7\8\781178f385514e7f29a96399bb76a2b63e1edc2c
-a
-1app/src/main/java/tsisyk/app/mycv/MainActivity.kt,2\6\26f9aea05a7e412b43f0c1541356b92e62af698d
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 x

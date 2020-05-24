@@ -1,6 +1,9 @@
 package tsisyk.app.mycv.ui.info
 
 import androidx.lifecycle.ViewModel
+import tsisyk.app.mycv.repository.CvRepository
+import tsisyk.app.mycv.utils.lazyDeferred
 
-class InfoViewModel : ViewModel() { // TODO: Implement the ViewModel
+class InfoViewModel(cvRepository: CvRepository) : ViewModel() {
+    val cv by lazyDeferred { cvRepository.getInfo() }
 }
