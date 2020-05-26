@@ -1,14 +1,15 @@
-package tsisyk.app.mycv.ui.info
+package tsisyk.app.mycv.ui.experience.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import tsisyk.app.mycv.repository.MyCvRepository
+import tsisyk.app.mycv.ui.info.InfoViewModel
 
 @Suppress("UNCHECKED_CAST")
-class InfoViewModelFactory(private val myCvRepository: MyCvRepository) :
+class FirmListViewModelFactory(private val myCvRepository: MyCvRepository) :
     ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return InfoViewModel(myCvRepository) as T
+        return FirmListViewModel(myCvRepository) as T
     }
 }

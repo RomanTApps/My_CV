@@ -39,17 +39,6 @@ class InfoFragment() : BaseScopedFragment(), KodeinAware {
         bindUI()
     }
 
-//    private fun bindUI() {
-//        val apiService = MyMockApiService(ConnectivityInterceptorImpl(requireContext()))
-//        val netWorkDataSource = NetWorkDataSourceImpl(apiService)
-//        netWorkDataSource.downloadedMyInfo.observe(viewLifecycleOwner, Observer {
-//            info_txt.text = it.toString()
-//        })
-//        GlobalScope.launch (Dispatchers.Main){
-//            netWorkDataSource.fetchInfo()
-//        }
-//    }
-
 
     private fun bindUI() = launch {
         val item = mViewModel.cv.await()

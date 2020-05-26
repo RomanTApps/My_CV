@@ -68,6 +68,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperianceEntry.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperienceDao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperienceEntry.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/network/ConnectivityInterceptor.kt">
           <value>
             <set />
@@ -113,12 +128,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/network/response/WorkExperiance.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/network/response/WorkExperianceEntry.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/network/response/WorkExperienceResponse.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/repository/CvRepository.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/repository/CvRepositoryImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/repository/MyCvRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/repository/MyCvRepositoryImpl.kt">
           <value>
             <set />
           </value>
@@ -139,6 +179,41 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/description/JobDescriptionFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/description/JobDescriptionViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/description/JobDescriptionViewModelFactory.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/CompanyItem.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/FirmListFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/FirmListViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/FirmListViewModelFactory.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/WorkItem.kt">
           <value>
             <set />
           </value>
@@ -194,6 +269,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/info_fragment.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/item_position.xml">
           <value>
             <set />
           </value>

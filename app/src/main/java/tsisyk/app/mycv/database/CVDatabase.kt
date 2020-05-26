@@ -7,12 +7,13 @@ import androidx.room.RoomDatabase
 
 
 @Database(
-    entities = [InfoEntry::class],
+    entities = [InfoEntry::class, WorkExperienceEntry::class],
     version = 1
 )
 
 abstract class CVDatabase : RoomDatabase() {
     abstract fun infoDao(): InfoDao
+    abstract fun workExperienceDao(): WorkExperienceDao
 
     companion object {
         @Volatile var instance: CVDatabase? = null

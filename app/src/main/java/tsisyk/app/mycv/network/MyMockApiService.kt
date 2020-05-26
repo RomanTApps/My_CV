@@ -7,11 +7,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import tsisyk.app.mycv.network.response.InfoResponse
+import tsisyk.app.mycv.network.response.WorkExperienceResponse
 
 interface MyMockApiService {
 
     @GET("info.json")
     fun getInfo(): Deferred<InfoResponse>
+
+
+    @GET("work.json")
+    fun getWorkExperience(): Deferred<WorkExperienceResponse>
 
     companion object{
         operator fun invoke( connectivityInterceptor: ConnectivityInterceptor): MyMockApiService{
