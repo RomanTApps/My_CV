@@ -16,16 +16,25 @@ class CvRepositoryImpl(
 ) : CvRepository {
 
     override suspend fun getInfo(): LiveData<InfoEntry> {
-        return withContext(Dispatchers.IO){
+
+        return withContext(Dispatchers.IO) {
+            initFirstTime()
             return@withContext infoDao.getInfo()
         }
     }
 
     init {
-        netWorkDataSource.fetchedInfo.observeForever { presistFetchedInfo(it)}
+        netWorkDataSource.downloadedMyInfo.observeForever { newInfo -> presistFetchedInfo(newInfo) }
     }
 
-    private fun presistFetchedInfo (infoResponse: InfoResponse){
-        GlobalScope.launch(Dispatchers.IO) { infoDao.upsert(infoResponse.InfoEntry) }
+    private fun presistFetchedInfo(infoResponse: InfoResponse) {
+        GlobalScope.launch(Dispatchers.IO) {
+            infoDao.upsert(infoResponse.InfoEntry)
+        }
     }
+
+    suspend fun initFirstTime() {
+        netWorkDataSource.fetchInfo()
+    }
+
 }

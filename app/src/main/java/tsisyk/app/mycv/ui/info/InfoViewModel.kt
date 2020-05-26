@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import tsisyk.app.mycv.repository.CvRepository
 import tsisyk.app.mycv.utils.lazyDeferred
 
-class InfoViewModel(cvRepository: CvRepository) : ViewModel() {
-    val cv by lazyDeferred { cvRepository.getInfo() }
+class InfoViewModel(private val cvRepository: CvRepository) : ViewModel() {
+        val cv by lazyDeferred { cvRepository.getInfo() }
+//    val cv = cvRepository.getInfo()
 }

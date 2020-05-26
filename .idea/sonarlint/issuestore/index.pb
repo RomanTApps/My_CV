@@ -54,3 +54,17 @@ x
 Happ/src/main/java/tsisyk/app/mycv/ui/experience/list/FirmListFragment.kt,7\f\7f74bdc34e397782cf541285803d826194ecc976
 u
 Eapp/src/main/java/tsisyk/app/mycv/ui/preference/PreferenceFragment.kt,a\9\a92f861b2e50c7550e066f41fee3301f0ffa90a3
+j
+:app/src/main/java/tsisyk/app/mycv/ui/BaseScopedFragment.kt,6\3\6361ec614008d566a38b06aa78b9c850b2ab5aec
+q
+Aapp/src/main/java/tsisyk/app/mycv/ui/info/InfoViewModelFactory.kt,5\e\5e77b62be2bc401e48870d66688e91eb65a87dc0
+l
+<app/src/main/java/tsisyk/app/mycv/repository/CvRepository.kt,4\9\49b89283f1a7b80f451ac9265487fb414d4eb387
+e
+5app/src/main/java/tsisyk/app/mycv/database/InfoDao.kt,e\e\ee1fe0675f41ff3f91fb57a5cc2e8648a4934e43
+d
+4app/src/main/java/tsisyk/app/mycv/utils/Delegates.kt,2\d\2d534dda3e6eeaa5f87f2e3f339ea6f1c19ba3c4
+g
+7app/src/main/java/tsisyk/app/mycv/database/InfoEntry.kt,e\d\eda969d52e6aefed3dd1e6b35a84f61eed1e16c4
+c
+3app/src/main/java/tsisyk/app/mycv/MyCvAplication.kt,e\2\e2c0d82e3ca7cd2556d1516097e6c6203ea65351

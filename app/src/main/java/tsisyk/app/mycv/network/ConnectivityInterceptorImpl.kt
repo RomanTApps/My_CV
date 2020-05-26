@@ -8,6 +8,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import tsisyk.app.mycv.utils.NoWifiException
 
+@Suppress("DEPRECATION")
 class ConnectivityInterceptorImpl(context: Context) : ConnectivityInterceptor {
 
     private var applicationContext = context.applicationContext
@@ -20,9 +21,11 @@ class ConnectivityInterceptorImpl(context: Context) : ConnectivityInterceptor {
     private fun isConnected(): Boolean {
         var connectivityManager = applicationContext.getSystemService(CONNECTIVITY_SERVICE)
                 as ConnectivityManager
-        var network = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
-        return network != null && network.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
-                network.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
+//        var network = connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
+//        return network != null && network.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+//                network.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
+        val networkInfo = connectivityManager.activeNetworkInfo
+        return networkInfo != null && networkInfo.isConnected
     }
 
 }

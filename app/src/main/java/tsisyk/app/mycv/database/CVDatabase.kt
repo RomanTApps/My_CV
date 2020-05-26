@@ -15,11 +15,10 @@ abstract class CVDatabase : RoomDatabase() {
     abstract fun infoDao(): InfoDao
 
     companion object {
-        @Volatile
-        var instance: CVDatabase? = null
+        @Volatile var instance: CVDatabase? = null
         private val LOCK_STATE = Any()
 
-        operator fun invoke(context: Context) = instance ?: kotlin.synchronized(LOCK_STATE) {
+        operator fun invoke(context: Context) = instance ?: synchronized(LOCK_STATE) {
             instance ?: buildDatabase(context).also { instance = it }
         }
 

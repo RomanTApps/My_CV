@@ -8,12 +8,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import tsisyk.app.mycv.network.response.InfoResponse
 
-//http://server452015.nazwa.pl/test_cv_app/info.json
-
 interface MyMockApiService {
 
     @GET("info.json")
-    fun getPrimaryInformation(): Deferred<InfoResponse>
+    fun getInfo(): Deferred<InfoResponse>
 
     companion object{
         operator fun invoke( connectivityInterceptor: ConnectivityInterceptor): MyMockApiService{

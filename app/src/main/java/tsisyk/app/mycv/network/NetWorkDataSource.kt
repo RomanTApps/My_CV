@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import tsisyk.app.mycv.network.response.InfoResponse
 
 interface NetWorkDataSource {
-    val fetchedInfo : LiveData<InfoResponse>
+    val downloadedMyInfo : LiveData<InfoResponse>
 
     suspend fun fetchInfo ()
 }

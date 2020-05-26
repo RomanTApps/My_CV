@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "MyInfo")
 class InfoEntry (
+
     @ColumnInfo(name = "email")
     val email: String,
     @ColumnInfo(name = "github")

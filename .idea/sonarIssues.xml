@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/generated/source/kapt/debug/tsisyk/app/mycv/database/InfoDao_Impl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tsisyk/app/mycv/database/InfoDao.java">
           <value>
             <set />
@@ -44,6 +49,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/InfoDao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/InfoDbEntry.kt">
           <value>
             <set />
           </value>

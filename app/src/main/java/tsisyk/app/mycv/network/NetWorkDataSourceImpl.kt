@@ -8,15 +8,15 @@ import tsisyk.app.mycv.utils.NoWifiException
 
 class NetWorkDataSourceImpl(private val myMockApiService: MyMockApiService) : NetWorkDataSource {
 
-    private val _fetchedInfo = MutableLiveData<InfoResponse>()
+    private val _downloadedMyInfo = MutableLiveData<InfoResponse>()
 
-    override val fetchedInfo: LiveData<InfoResponse>
-        get() = _fetchedInfo
+    override val downloadedMyInfo: LiveData<InfoResponse>
+        get() = _downloadedMyInfo
 
     override suspend fun fetchInfo() {
 
         try {
-            _fetchedInfo.postValue(myMockApiService.getPrimaryInformation().await())
+            _downloadedMyInfo.postValue(myMockApiService.getInfo().await())
         } catch (e: NoWifiException) {
             Log.e("Error",  e.toString())
         }
