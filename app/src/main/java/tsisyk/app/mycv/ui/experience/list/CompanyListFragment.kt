@@ -1,12 +1,12 @@
 package tsisyk.app.mycv.ui.experience.list
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
@@ -22,12 +22,12 @@ import tsisyk.app.mycv.ui.BaseScopedFragment
 
 
 @Suppress("DEPRECATION")
-class FirmListFragment : BaseScopedFragment(), KodeinAware {
+class CompanyListFragment : BaseScopedFragment(), KodeinAware {
 
     override val kodein by closestKodein()
-    private val viewModelFactory by instance<FirmListViewModelFactory>()
+    private val viewModelFactory by instance<CompanyListViewModelFactory>()
 
-    private lateinit var viewModel: FirmListViewModel
+    private lateinit var viewModel: CompanyListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -37,7 +37,7 @@ class FirmListFragment : BaseScopedFragment(), KodeinAware {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(FirmListViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(CompanyListViewModel::class.java)
         bindUI()
     }
 
@@ -55,15 +55,27 @@ class FirmListFragment : BaseScopedFragment(), KodeinAware {
 
     private fun initRecycleView(items: List<CompanyItem>) {
         val groupAdapter = GroupAdapter<ViewHolder>().apply { addAll(items) }
+
         recycler_view.apply {
-            layoutManager = LinearLayoutManager(this@FirmListFragment.context)
+            layoutManager = LinearLayoutManager(this@CompanyListFragment.context)
             adapter = groupAdapter
         }
-        groupAdapter.setOnItemClickListener { item, view -> Log.i("CLick", item.toString()) }
+
+        groupAdapter.setOnItemClickListener { item, view ->
+            (item as? CompanyItem)?.let {
+                showWorkDetail(it.workExperienceEntry.firmName, view)
+            }
+        }
     }
 
     private fun List<WorkExperienceEntry>.toCompanyItems(): List<CompanyItem> {
         return this.map { CompanyItem(it) }
+    }
+
+    private fun showWorkDetail(firmName: String, view: View) {
+        val actionDescription =
+            CompanyListFragmentDirections.actionDescription(firmName)
+        Navigation.findNavController(view).navigate(actionDescription)
     }
 
 }

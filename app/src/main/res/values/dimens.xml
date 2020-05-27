@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="one">16dp</dimen>
+    <dimen name="small_icon">96dp</dimen>
+    <dimen name="one_haft">8dp</dimen>
+    <dimen name="medium_height">128dp</dimen>
+</resources>

@@ -28,6 +28,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/tsisyk/app/mycv/database/WorkExperienceDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <value>
             <set />
@@ -74,6 +79,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperienceDao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperienceDetailEntry.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/database/WorkExperienceDetaileEntry.kt">
           <value>
             <set />
           </value>
@@ -193,7 +208,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/detailes/CompanyDescriptionFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/detailes/CompanyDescriptionViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/detailes/CompanyDescriptionViewModelFactory.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/CompanyItem.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/tsisyk/app/mycv/ui/experience/list/CompanyListFragment.kt">
           <value>
             <set />
           </value>
@@ -299,6 +334,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/xml/preference.xml">
           <value>
             <set />
           </value>

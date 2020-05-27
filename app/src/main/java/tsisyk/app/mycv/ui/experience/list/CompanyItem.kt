@@ -7,9 +7,7 @@ import kotlinx.android.synthetic.main.item_position.*
 import tsisyk.app.mycv.R
 import tsisyk.app.mycv.database.WorkExperienceEntry
 
-class CompanyItem(
-    val workExperienceEntry: WorkExperienceEntry
-) : Item() {
+class CompanyItem( val workExperienceEntry: WorkExperienceEntry) : Item() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.apply {
             text_company_name.text = workExperienceEntry.firmName

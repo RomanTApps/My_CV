@@ -16,4 +16,7 @@ interface WorkExperienceDao {
 
     @Query("select count(firmName) from work_experience")
     fun countWorkExperience (): Int
+
+    @Query("select * from work_experience where firmName == :name" )
+    fun getWorkExperienceDetaile (name: String): LiveData<WorkExperienceDetaileEntry>
 }

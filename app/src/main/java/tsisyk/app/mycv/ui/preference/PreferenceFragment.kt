@@ -1,33 +1,24 @@
 package tsisyk.app.mycv.ui.preference
 
-import androidx.lifecycle.ViewModelProviders
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceFragmentCompat
 import tsisyk.app.mycv.R
 
-class PreferenceFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PreferenceFragment()
-    }
+class PreferenceFragment : PreferenceFragmentCompat() {
 
-    private lateinit var viewModel: PreferenceViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.preference_fragment, container, false)
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(PreferenceViewModel::class.java)
-        // TODO: Use the ViewModel
+        (activity as AppCompatActivity)?.supportActionBar?.title = "Settings"
     }
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        addPreferencesFromResource(R.xml.preference)
+    }
+
 
 }

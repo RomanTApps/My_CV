@@ -11,12 +11,12 @@ import androidx.room.RoomDatabase
     version = 1
 )
 
-abstract class CVDatabase : RoomDatabase() {
+abstract class MyCvDatabase : RoomDatabase() {
     abstract fun infoDao(): InfoDao
     abstract fun workExperienceDao(): WorkExperienceDao
 
     companion object {
-        @Volatile var instance: CVDatabase? = null
+        @Volatile var instance: MyCvDatabase? = null
         private val LOCK_STATE = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK_STATE) {
@@ -24,7 +24,7 @@ abstract class CVDatabase : RoomDatabase() {
         }
 
         private fun buildDatabase(context: Context) =
-            Room.databaseBuilder(context.applicationContext, CVDatabase::class.java, "cv.db")
+            Room.databaseBuilder(context.applicationContext, MyCvDatabase::class.java, "cv.db")
                 .build()
     }
 }

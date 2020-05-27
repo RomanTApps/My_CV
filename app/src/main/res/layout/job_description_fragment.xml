@@ -1,13 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.experience.description.JobDescriptionFragment">
+    android:paddingEnd="16dp"
+    android:layout_marginBottom="64dp">
 
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/medium_height"
+            android:layout_height="@dimen/medium_height"
+            android:layout_margin="32dp"
+            android:src="@android:mipmap/sym_def_app_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_companyName"
+            style="@style/AppTheme.Text"
+            android:text="companyName"
+            app:layout_constraintBottom_toBottomOf="@+id/image_company"
+            app:layout_constraintStart_toEndOf="@+id/image_company"
+            app:layout_constraintTop_toTopOf="@+id/image_company" />
+
+        <TextView
+            android:id="@+id/textView_position"
+            style="@style/AppTheme.Text"
+            android:text="position"
+            app:layout_constraintBottom_toBottomOf="@+id/image_position"
+            app:layout_constraintStart_toEndOf="@+id/image_position"
+            app:layout_constraintTop_toTopOf="@+id/image_position" />
+
+        <TextView
+            android:id="@+id/textView_languages"
+            style="@style/AppTheme.Text"
+            android:text="languages"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView_libraries"
+            style="@style/AppTheme.Text"
+            android:text="libraries"
+            app:layout_constraintBottom_toBottomOf="@+id/image_libryries"
+            app:layout_constraintStart_toEndOf="@+id/image_libryries"
+            app:layout_constraintTop_toTopOf="@+id/image_libryries" />
+
+        <TextView
+            android:id="@+id/textView_date"
+            style="@style/AppTheme.Text"
+            android:text="date"
+            app:layout_constraintBottom_toBottomOf="@+id/image_date"
+            app:layout_constraintStart_toEndOf="@+id/image_date"
+            app:layout_constraintTop_toTopOf="@+id/image_date" />
+
+        <TextView
+            android:id="@+id/textView_location"
+            style="@style/AppTheme.Text"
+            android:text="location"
+            app:layout_constraintBottom_toBottomOf="@+id/image_local"
+            app:layout_constraintStart_toEndOf="@+id/image_local"
+            app:layout_constraintTop_toTopOf="@+id/image_local" />
+
+        <TextView
+            android:id="@+id/textView_tools"
+            style="@style/AppTheme.Text"
+            android:text="tools"
+            app:layout_constraintBottom_toBottomOf="@+id/image_tools"
+            app:layout_constraintStart_toEndOf="@+id/image_tools"
+            app:layout_constraintTop_toTopOf="@+id/image_tools" />
+
+        <TextView
+            android:id="@+id/textView_team_size"
+            style="@style/AppTheme.Text"
+            android:text="team_size"
+            app:layout_constraintBottom_toBottomOf="@+id/image_team"
+            app:layout_constraintStart_toEndOf="@+id/image_team"
+            app:layout_constraintTop_toTopOf="@+id/image_team"
+            app:layout_constraintVertical_bias="0.477" />
+
+        <TextView
+            android:id="@+id/textView_responsibility"
+            style="@style/AppTheme.Text"
+            android:layout_marginTop="32dp"
+            android:paddingEnd="16dp"
+            android:text="responsibility"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_team_size" />
+
+        <ImageView
+            android:id="@+id/image_tools"
+            style="@style/AppTheme.Image"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_libryries" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            style="@style/AppTheme.Image"
+
+            android:src="@drawable/word"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_local" />
+
+        <ImageView
+            android:id="@+id/image_libryries"
+            style="@style/AppTheme.Image"
+            android:src="@drawable/site"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <ImageView
+            android:id="@+id/image_team"
+            style="@style/AppTheme.Image"
+            android:src="@drawable/ui"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_tools" />
+
+        <ImageView
+            android:id="@+id/image_company"
+            style="@style/AppTheme.Image"
+            android:src="@drawable/icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/image_local"
+            style="@style/AppTheme.Image"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_position" />
+
+        <ImageView
+            android:id="@+id/image_date"
+            style="@style/AppTheme.Image"
+            android:src="@drawable/startup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_company" />
+
+        <ImageView
+            android:id="@+id/image_position"
+            style="@style/AppTheme.Image"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/responsive"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

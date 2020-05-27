@@ -5,10 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import tsisyk.app.mycv.database.InfoDao
-import tsisyk.app.mycv.database.InfoEntry
-import tsisyk.app.mycv.database.WorkExperienceDao
-import tsisyk.app.mycv.database.WorkExperienceEntry
+import tsisyk.app.mycv.database.*
 import tsisyk.app.mycv.network.NetWorkDataSource
 import tsisyk.app.mycv.network.response.InfoResponse
 import tsisyk.app.mycv.network.response.WorkExperienceResponse
@@ -19,6 +16,8 @@ class MyCvRepositoryImpl(
     private val netWorkDataSource: NetWorkDataSource
 ) : MyCvRepository {
 
+    // MyInfo fragment
+
     init {
         netWorkDataSource.downloadedMyInfo.observeForever(this::presistFetchedInfo)
         netWorkDataSource.downloadedWorkExperiance.observeForever { presistFetchedWorkExperience(it) }
@@ -26,6 +25,7 @@ class MyCvRepositoryImpl(
 
     private suspend fun initFirstTime() {
         netWorkDataSource.fetchInfo()
+        netWorkDataSource.fetchWorkExperience()
     }
 
 
@@ -43,11 +43,12 @@ class MyCvRepositoryImpl(
         }
     }
 
+    // List fragment
 
 
     override suspend fun getWorkExperience(): LiveData<List<WorkExperienceEntry>> {
         return withContext(Dispatchers.IO) {
-            initFirstTimeWorkExperience()
+            initFirstTime()
             return@withContext workExperienceDao.getWorkExperience()
         }
     }
@@ -59,8 +60,16 @@ class MyCvRepositoryImpl(
         }
     }
 
-    private suspend fun initFirstTimeWorkExperience() {
-        netWorkDataSource.fetchWorkExperience()
+    // Detail fragment
+
+
+    override suspend fun getWorkExperienceDetails(firmName: String): LiveData<WorkExperienceDetaileEntry> {
+        return withContext(Dispatchers.IO) {
+            initFirstTime()
+            return@withContext workExperienceDao.getWorkExperienceDetaile(firmName)
+        }
     }
+
+
 
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+    <PreferenceCategory
+        android:key="GIT_HUB"
+        android:icon="@drawable/ic_github"
+        android:title="Source code"
+        android:summary="https://github.com/RomanTsisyk/My_CV"/>
+
+    <PreferenceCategory
+        android:key="LINKEDIN"
+        android:icon="@drawable/ic_linkedin"
+        android:title="Roman Tsisyk"
+        android:summary="https://pl.linkedin.com/in/Roman-Tsisyk"/>
+
+    <PreferenceCategory
+        android:key="EMAIL"
+        android:icon="@drawable/ic_mail"
+        android:title="Made for Ankit Thakur"
+        android:summary="ankit.thakur@collabera.com"/>
+
+    <PreferenceCategory
+        android:key="EMAIL"
+        android:icon="@drawable/ic_mail"
+        android:title="Made for Mahendran Dhas"
+        android:summary="mdhas@eteaminc.com"/>
+
+
+</PreferenceScreen>
